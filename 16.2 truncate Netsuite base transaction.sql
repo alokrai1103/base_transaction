@@ -1,0 +1,1 @@
+Truncate table Netsuite.base_transaction

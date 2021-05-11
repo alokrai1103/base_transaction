@@ -1,0 +1,1 @@
+TRUNCATE TABLE  cef_prod.source_base_transaction_item

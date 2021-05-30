@@ -1,3 +1,4 @@
+/*
 UPDATE
     cef_prod.source_stg_base_transaction B INNER JOIN
     Netsuite.MEMBERSHIP M
@@ -11,3 +12,4 @@ SET
     , membership_lifecycle = M.LIFECYCLE_YEAR
     , membership_tier = L.LIST_ITEM_NAME
     , membership_parentId = M.PARENT_MEMBER_ID
+*/

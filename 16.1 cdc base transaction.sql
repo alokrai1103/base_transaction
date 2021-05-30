@@ -1,3 +1,5 @@
+
+  
 WITH
     base_transaction_outer_join AS
     (
@@ -222,7 +224,7 @@ WITH
               case when lag_hash_diff_base_transaction = hash_diff_base_transaction then 'NC'
                    when col_source='stg' and lag_hash_diff_base_transaction != hash_diff_base_transaction then 'MOD'
                    when col_source='stg' and lag_hash_diff_base_transaction is null then 'INS'
-                   when col_source='current_view' and lag_hash_diff_base_transaction is null then 'DEL'
+                   --when col_source='current_view' and lag_hash_diff_base_transaction is null then 'DEL'
                  end as cdc_identification
             , *
         FROM
@@ -379,4 +381,16 @@ FROM
     cdc_identification
 WHERE
     cdc_identification in ('MOD', 'INS', 'DEL') 
-GO
+
+
+--- UPDATE active_flag for deleted records 
+UPDATE
+cef_prod.source_base_transaction BT 
+LEFT JOIN
+TRANSACTIONS T
+	ON BT.transaction_id = T.Transaction_id
+SET
+	active_flag = 'false'
+WHERE
+	T.transaction_id IS NULL	
+

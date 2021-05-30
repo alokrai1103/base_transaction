@@ -1,4 +1,4 @@
-
+/*
 Update
     cef_prod.source_stg_base_transaction B INNER JOIN
     Netsuite.TRANSACTIONS T
@@ -19,3 +19,4 @@ SET
 
 WHERE 
     TL.TRANSACTION_ORDER = 0 
+ */

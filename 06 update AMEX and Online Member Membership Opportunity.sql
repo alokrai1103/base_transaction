@@ -1,3 +1,4 @@
+/*
 UPDATE
     cef_prod.source_stg_base_transaction B INNER JOIN
     (
@@ -40,3 +41,4 @@ SET
     , renewal_opportunity_id = A.RENEWAL_OPPORTUNITY_ID
     , actual_customer_id = A.MEMBER_NAME_ID    
 
+*/

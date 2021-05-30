@@ -1,3 +1,4 @@
+/*
 UPDATE
     cef_prod.source_stg_base_transaction B INNER JOIN
     Netsuite.TRANSACTIONS T
@@ -19,3 +20,5 @@ SET
     , currency_symbol = C.SYMBOL
 WHERE
     IT.MEMBERSHIP_ID IN (1, 2)
+
+*/

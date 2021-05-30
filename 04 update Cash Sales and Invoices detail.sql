@@ -1,3 +1,4 @@
+/*
 UPDATE
     cef_prod.source_stg_base_transaction B LEFT JOIN 
     Netsuite.TRANSACTION_LINES TL ON B.transaction_id = TL.TRANSACTION_ID LEFT JOIN
@@ -23,3 +24,4 @@ SET
     , net_amount = case when (TL_C.COUPON_CASH_SALE_ID is null or (TL_C.COUPON_CASH_SALE_ID is not null and ifnull(TL_C.AMOUNT,0) =0)) then case when TL.AMOUNT <0 then -TL.AMOUNT else TL.AMOUNT end else TL_C.AMOUNT END
 WHERE
     IT.ITEM_TYPE_ID IN (1, 2, 3, 4)
+*/

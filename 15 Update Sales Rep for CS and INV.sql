@@ -1,3 +1,4 @@
+/*
 UPDATE
     cef_prod.source_stg_base_transaction B INNER JOIN
     Netsuite.TRANSACTIONS T
@@ -7,3 +8,4 @@ UPDATE
 SET
       sales_rep_id = T.SALES_REP_ID
     , employee_name = E.FULL_NAME
+*/

@@ -1,6 +1,5 @@
 
-  
-WITH
+  WITH
     base_transaction_outer_join AS
     (
         SELECT

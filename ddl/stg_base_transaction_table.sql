@@ -9,6 +9,7 @@ CREATE TABLE cef_prod.source_stg_base_transaction  (
 	, transaction_date         	        datetime NULL
 	, transaction_type         	        varchar(255) NULL
 	, transaction_number       	        varchar(255) NULL
+	, transaction_line_id 				int
 	, transaction_status       	        varchar(255) NULL
 	, duplicate_created_from_id	        varchar(255) NULL
 	, sale_order_id            	        bigint(20) NULL
@@ -32,6 +33,8 @@ CREATE TABLE cef_prod.source_stg_base_transaction  (
 	, membership_tier          	        varchar(255) NULL
 	, membership_parentId      	        bigint(20) NULL
 	, membership_department    	        varchar(255) NULL
+	, membership_end_date 				date NULL
+	, renewal_due_date                  date NULL
 	, no_foc_rolledover        	        int(11) NULL
 	, no_foc_sale              	        int(11) NULL
 	, transaction_amount       	        decimal(10,0) NULL
